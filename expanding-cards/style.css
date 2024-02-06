@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex; /* 水平排列 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    height: 100vh; 
+    overflow: hidden; /* 隐藏超出部分 */
+    margin: 0; /* 去除默认外边距 */
+}
+.container{
+    display: flex; /* 水平排列 */
+    width: 90vw;
+}
+.panel{
+    background-size: cover; /* 背景图片自适应 */
+    background-position: center; /* 背景图片居中 */
+    height: 80vh;
+    border-radius: 50px; /* 圆角 */
+    color: #fff;
+    cursor: pointer; /* 鼠标指针放到图片上变成指针 */
+    flex: 0.5; /* 占据一半的宽度 */
+    margin: 10px; /* 间距 */
+    position: relative; 
+    transition: all 700ms ease-in; 
+
+}
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0; /* 默认隐藏 */
+}
+.panel.active{
+    flex: 5; /* 放大 */
+}
+.panel.active h3{
+    opacity: 1; /* 显示 */
+    transition: opacity 0.3s ease-in 0.4s;
+}
